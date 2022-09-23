@@ -1,0 +1,260 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff91d121699, pid=25196, tid=24048
+#
+# JRE version:  (13.0.1+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.1+9, mixed mode, aot, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [VCRUNTIME140.dll+0x1699]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=Cp1252 ip1
+
+Host: Intel(R) Core(TM) i7-4700HQ CPU @ 2.40GHz, 8 cores, 19G,  Windows 10 , 64 bit Build 18362 (10.0.18362.329)
+Time: Fri Mar 13 13:41:59 2020 Taipei Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000011b2232b000):  JavaThread "Unknown thread" [_thread_in_vm, id=24048, stack(0x00000010f3200000,0x00000010f3300000)]
+
+Stack: [0x00000010f3200000,0x00000010f3300000],  sp=0x00000010f32fef20,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [VCRUNTIME140.dll+0x1699]
+V  [jvm.dll+0x6138a8]
+V  [jvm.dll+0x76f1a8]
+V  [jvm.dll+0x76e610]
+V  [jvm.dll+0x5d2694]
+V  [jvm.dll+0x5d3601]
+V  [jvm.dll+0x74fd35]
+V  [jvm.dll+0x363739]
+V  [jvm.dll+0x732dc5]
+V  [jvm.dll+0x3ce2ef]
+V  [jvm.dll+0x3d0611]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x20e72]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ced1]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), writing address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000011b22382fe0, RCX=0x0000000000020000, RDX=0x0000000000000000
+RSP=0x00000010f32fef20, RBP=0x0000000000000001, RSI=0x0000011b22382fe0, RDI=0x0000000000000000
+R8 =0x0000000000020000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000000
+R12=0x0000000800000000, R13=0x0000011b202790e0, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x00007ff91d121699, EFLAGS=0x0000000000010203
+
+Top of Stack: (sp=0x00000010f32fef20)
+0x00000010f32fef20:   0000000000000000 00007ff8eeed38a8
+0x00000010f32fef30:   0000000000000001 0000011b22382fe0
+0x00000010f32fef40:   0000011b22382fe0 0000000000000000
+0x00000010f32fef50:   0000011b22335860 00007ff8ef02f1a8
+0x00000010f32fef60:   0000011b22335860 0000011b22335860
+0x00000010f32fef70:   0000000000000000 0000000000000000
+0x00000010f32fef80:   0000000800000000 0000000040000000
+0x00000010f32fef90:   0000000000000000 0000000000010000
+0x00000010f32fefa0:   ffffffff00000200 0000000000000200
+0x00000010f32fefb0:   0000011b2231cff0 00007ff8ef02e610
+0x00000010f32fefc0:   00000010f32ff090 0000011b22335860
+0x00000010f32fefd0:   0000011b484adfb0 0000000000000000
+0x00000010f32fefe0:   0000011b20284be8 00007ff8eee92694
+0x00000010f32feff0:   0000000800000000 00000010f32ff0f0
+0x00000010f32ff000:   0000000000000000 0000000040000000
+0x00000010f32ff010:   0000000800000000 0000000000000000 
+
+Instructions: (pc=0x00007ff91d121699)
+0x00007ff91d121599:   ff ff 0f 1f 44 00 00 49 03 c8 0f 10 44 11 f0 48
+0x00007ff91d1215a9:   83 e9 10 49 83 e8 10 f6 c1 0f 74 17 48 8b c1 48
+0x00007ff91d1215b9:   83 e1 f0 0f 10 c8 0f 10 04 11 0f 11 08 4c 8b c1
+0x00007ff91d1215c9:   4d 2b c3 4d 8b c8 49 c1 e9 07 74 68 0f 29 01 eb
+0x00007ff91d1215d9:   0d 66 0f 1f 44 00 00 0f 29 41 10 0f 29 09 0f 10
+0x00007ff91d1215e9:   44 11 f0 0f 10 4c 11 e0 48 81 e9 80 00 00 00 0f
+0x00007ff91d1215f9:   29 41 70 0f 29 49 60 0f 10 44 11 50 0f 10 4c 11
+0x00007ff91d121609:   40 49 ff c9 0f 29 41 50 0f 29 49 40 0f 10 44 11
+0x00007ff91d121619:   30 0f 10 4c 11 20 0f 29 41 30 0f 29 49 20 0f 10
+0x00007ff91d121629:   44 11 10 0f 10 0c 11 75 ae 0f 29 41 10 49 83 e0
+0x00007ff91d121639:   7f 0f 28 c1 4d 8b c8 49 c1 e9 04 74 1a 66 66 0f
+0x00007ff91d121649:   1f 84 00 00 00 00 00 0f 11 01 48 83 e9 10 0f 10
+0x00007ff91d121659:   04 11 49 ff c9 75 f0 49 83 e0 0f 74 08 41 0f 10
+0x00007ff91d121669:   0a 41 0f 11 0b 0f 11 01 49 8b c3 c3 cc cc cc cc
+0x00007ff91d121679:   cc cc cc cc cc cc cc cc cc cc cc cc cc 66 66 0f
+0x00007ff91d121689:   1f 84 00 00 00 00 00 57 8b c2 48 8b f9 49 8b c8
+0x00007ff91d121699:   f3 aa 49 8b c3 5f c3 cc cc cc cc cc cc 66 66 0f
+0x00007ff91d1216a9:   1f 84 00 00 00 00 00 4c 8b d9 0f b6 d2 49 b9 01
+0x00007ff91d1216b9:   01 01 01 01 01 01 01 4c 0f af ca 49 83 f8 10 0f
+0x00007ff91d1216c9:   86 f2 00 00 00 66 49 0f 6e c1 66 0f 60 c0 49 81
+0x00007ff91d1216d9:   f8 80 00 00 00 77 10 0f ba 25 c4 fc 00 00 02 0f
+0x00007ff91d1216e9:   83 62 00 00 00 eb a0 0f ba 25 b4 fc 00 00 01 72
+0x00007ff91d1216f9:   96 0f 11 01 4c 03 c1 48 83 c1 10 48 83 e1 f0 4c
+0x00007ff91d121709:   2b c1 4d 8b c8 49 c1 e9 07 74 3c 66 66 66 66 0f
+0x00007ff91d121719:   1f 84 00 00 00 00 00 0f 29 01 0f 29 41 10 48 81
+0x00007ff91d121729:   c1 80 00 00 00 0f 29 41 a0 0f 29 41 b0 49 ff c9
+0x00007ff91d121739:   0f 29 41 c0 0f 29 41 d0 0f 29 41 e0 66 0f 29 41
+0x00007ff91d121749:   f0 75 d4 49 83 e0 7f 4d 8b c8 49 c1 e9 04 74 13
+0x00007ff91d121759:   0f 1f 80 00 00 00 00 0f 11 01 48 83 c1 10 49 ff
+0x00007ff91d121769:   c9 75 f4 49 83 e0 0f 74 06 42 0f 11 44 01 f0 49
+0x00007ff91d121779:   8b c3 c3 ee 17 00 00 eb 17 00 00 17 18 00 00 e7
+0x00007ff91d121789:   17 00 00 f4 17 00 00 04 18 00 00 14 18 00 00 e4 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8ef3846b8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000011b223a6800 GCTaskThread "GC Thread#0" [stack: 0x00000010f3300000,0x00000010f3400000] [id=13124]
+  0x0000011b223d3000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000010f3400000,0x00000010f3500000] [id=11360]
+  0x0000011b223d5000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000010f3500000,0x00000010f3600000] [id=12116]
+  0x0000011b485c0800 ConcurrentGCThread "G1 Refine#0" [stack: 0x00000010f3600000,0x00000010f3700000] [id=4092]
+  0x0000011b484ba000 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x00000010f3700000,0x00000010f3800000] [id=13372]
+
+=>0x0000011b2232b000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=24048, stack(0x00000010f3200000,0x00000010f3300000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000011b2231cff0] MetaspaceExpand_lock - owner thread: 0x0000011b2232b000
+
+Heap address: 0x00000006c1400000, size: 5100 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-13.0.1\bin\zip.dll
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-13.0.1\bin\jimage.dll
+Event: 0.008 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.009 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.009 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.009 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.009 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.009 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff6d0960000 - 0x00007ff6d096f000 	C:\Program Files\Java\jdk-13.0.1\bin\javaw.exe
+0x00007ff925060000 - 0x00007ff925250000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff923870000 - 0x00007ff923922000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff922e30000 - 0x00007ff9230d3000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff922d30000 - 0x00007ff922e2a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9200e0000 - 0x00007ff9200f8000 	C:\Program Files\Java\jdk-13.0.1\bin\jli.dll
+0x00007ff91d120000 - 0x00007ff91d135000 	C:\Program Files\Java\jdk-13.0.1\bin\VCRUNTIME140.dll
+0x00007ff9237c0000 - 0x00007ff923863000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9246f0000 - 0x00007ff92478e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff924470000 - 0x00007ff924507000 	C:\Windows\System32\sechost.dll
+0x00007ff923cb0000 - 0x00007ff923dd0000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff9232e0000 - 0x00007ff923474000 	C:\Windows\System32\USER32.dll
+0x00007ff911190000 - 0x00007ff911415000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.719_none_e6c7b883130c6729\COMCTL32.dll
+0x00007ff922d00000 - 0x00007ff922d21000 	C:\Windows\System32\win32u.dll
+0x00007ff923480000 - 0x00007ff9237b6000 	C:\Windows\System32\combase.dll
+0x00007ff924790000 - 0x00007ff9247b6000 	C:\Windows\System32\GDI32.dll
+0x00007ff922a10000 - 0x00007ff922ba4000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9220c0000 - 0x00007ff922140000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff922bb0000 - 0x00007ff922c4e000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff91b360000 - 0x00007ff91b36a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff924900000 - 0x00007ff92492e000 	C:\Windows\System32\IMM32.DLL
+0x00007ff90a000000 - 0x00007ff90a09b000 	C:\Program Files\Java\jdk-13.0.1\bin\msvcp140.dll
+0x00007ff8ee8c0000 - 0x00007ff8ef426000 	C:\Program Files\Java\jdk-13.0.1\bin\server\jvm.dll
+0x00007ff924310000 - 0x00007ff924318000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff91fa80000 - 0x00007ff91faa4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff915ca0000 - 0x00007ff915ca9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff923dd0000 - 0x00007ff923e3f000 	C:\Windows\System32\WS2_32.dll
+0x00007ff91fa50000 - 0x00007ff91fa7d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ff922c50000 - 0x00007ff922c9a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ff921f30000 - 0x00007ff921f41000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ff910280000 - 0x00007ff910290000 	C:\Program Files\Java\jdk-13.0.1\bin\verify.dll
+0x00007ff90c380000 - 0x00007ff90c574000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff90bd60000 - 0x00007ff90bd8a000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff8f20d0000 - 0x00007ff8f20f6000 	C:\Program Files\Java\jdk-13.0.1\bin\java.dll
+0x00007ff9025f0000 - 0x00007ff902607000 	C:\Program Files\Java\jdk-13.0.1\bin\zip.dll
+0x00007ff910250000 - 0x00007ff91025a000 	C:\Program Files\Java\jdk-13.0.1\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-13.0.1\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.719_none_e6c7b883130c6729;C:\Program Files\Java\jdk-13.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: ip1
+java_class_path (initial): C:\Users\kiero\eclipse-workspace\finals\bin;C:\Users\kiero\Desktop\mysql-connector.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 335544320                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 5347737600                                {product} {ergonomic}
+   size_t MaxNewSize                               = 3208642560                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 5347737600                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/Java/jdk-13.0.1/bin/server;C:/Program Files/Java/jdk-13.0.1/bin;D:\app\kiero\product\11.2.0\client_1;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\kiero\AppData\Local\Microsoft\WindowsApps;;C:\Windows\System32;
+USERNAME=kiero
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.329)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, fma
+
+Memory: 4k page, system-wide physical 20397M (11933M free)
+TotalPageFile size 49014M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 395M, peak: 399M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.1+9) for windows-amd64 JRE (13.0.1+9), built on Oct  6 2019 12:37:49 by "mach5one" with unknown MS VC++:1916
+
+END.
